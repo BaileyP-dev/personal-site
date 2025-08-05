@@ -1,210 +1,68 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+
 ---
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
+<div id="container" class="h-screen bg-[#F1F1F1] px-8 pt-8 relative overflow-hidden">
+  <!-- Logo -->
+  <div class="absolute top-8 left-8">
+    <div class="font-script text-[50px] font-normal text-[#181818] leading-none">
+      <svg width="38" height="49" viewBox="0 0 38 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.92511 9.92212C10.1402 9.63465 10.4722 9.36128 10.9213 9.10201C11.3618 8.87494 11.7194 8.76371 11.9942 8.76833C12.6813 8.77989 13.5176 8.81417 14.5031 8.87118C15.4886 8.92819 16.5385 9.00245 17.6528 9.09396C18.767 9.18548 19.8974 9.28131 21.0439 9.38145C22.214 9.52242 23.3196 9.64613 24.3609 9.75259C25.4343 9.86768 26.3865 9.98477 27.2173 10.1039C28.0481 10.2229 28.7093 10.3311 29.2009 10.4283C29.7161 10.5663 29.9584 10.8211 29.9279 11.1925C29.8002 12.0555 29.3347 12.5692 28.5314 12.7336C27.9088 12.7393 27.2013 12.7395 26.4089 12.7343C25.6166 12.729 24.7599 12.7065 23.8388 12.6668C23.9216 13.5172 24.1063 14.3086 24.3932 15.0412C24.68 15.7737 25.0293 16.4022 25.4409 16.9266C25.8761 17.4918 26.3458 17.9282 26.85 18.2359C27.3778 18.5844 27.9327 18.7676 28.5145 18.7854C29.1694 18.7884 29.741 18.4584 30.2292 17.7955C30.7174 17.1326 31.0866 16.3343 31.3368 15.4005C31.6819 14.1126 31.751 12.8888 31.5441 11.7291C31.3608 10.6102 31.0432 9.54158 30.5913 8.52327C30.4051 8.05925 30.4207 7.6148 30.638 7.18992C30.8962 6.74147 31.2884 6.50145 31.8145 6.46987C32.2652 6.59065 32.63 6.77468 32.9089 7.02194C33.1877 7.2692 33.4214 7.55613 33.61 7.88273C34.3729 9.15692 34.7824 10.5262 34.8386 11.9907C34.8862 13.4873 34.7073 14.9923 34.3018 16.5056C33.974 17.7291 33.4659 18.8525 32.7776 19.8759C32.0806 20.9315 31.1252 21.7281 29.9114 22.2655C29.1639 22.4794 28.436 22.4914 27.7277 22.3016C27.0107 22.144 26.3443 21.8619 25.7286 21.4553C25.1128 21.0488 24.5551 20.5543 24.0555 19.9718C23.5473 19.4215 23.1239 18.8767 22.7853 18.3373C22.634 19.1595 22.3335 19.959 21.8838 20.7357C21.4663 21.5211 20.9137 22.1667 20.226 22.6727C19.5619 23.2194 18.7713 23.5942 17.8542 23.7971C16.9371 24 15.9151 23.9504 14.7882 23.6485C13.5003 23.3034 12.4027 22.6987 11.4955 21.8345C10.5796 21.0024 9.87652 20.0203 9.38617 18.8881C8.88719 17.7882 8.58802 16.5865 8.48866 15.283C8.38068 14.0117 8.49492 12.7483 8.83138 11.4926C8.97805 10.9452 9.2555 10.5537 9.66375 10.318C9.70689 10.157 9.79401 10.025 9.92511 9.92212ZM20.1191 12.4465C18.7944 12.3676 17.4257 12.2597 16.013 12.1228C14.6003 11.9858 13.1833 11.8649 11.762 11.7602L11.7102 11.9534C11.5204 12.6617 11.4421 13.4689 11.4754 14.3751C11.5001 15.3135 11.6547 16.2176 11.9392 17.0876C12.2559 17.9661 12.7038 18.7418 13.2827 19.4146C13.8938 20.096 14.6545 20.5413 15.5646 20.7507C16.4127 20.8054 17.1237 20.5991 17.6975 20.1317C18.2714 19.6643 18.7349 19.0292 19.088 18.2266C19.4324 17.4562 19.674 16.5546 19.8127 15.522C19.9749 14.5302 20.077 13.505 20.1191 12.4465ZM4.22873 32.7268C3.88318 32.5997 3.5753 32.3964 3.30509 32.117C3.05845 31.8783 2.99868 31.5862 3.12578 31.2407C3.30464 30.702 3.64333 30.2751 4.14186 29.96C4.63175 29.6772 5.00549 29.5703 5.26307 29.6393C8.05563 30.4221 10.931 31.089 13.8892 31.6401C16.8709 32.232 19.8711 32.6908 22.8896 33.0165C23.0184 33.051 23.1547 33.122 23.2984 33.2295C23.4099 33.3284 23.5333 33.4477 23.6684 33.5875C23.8357 33.7358 23.9696 33.9443 24.0702 34.2128C24.1064 34.464 24.0256 34.7012 23.8278 34.9243C23.6214 35.1795 23.3548 35.4015 23.0282 35.59C22.7016 35.7786 22.3515 35.9263 21.9777 36.0332C21.604 36.1401 21.2593 36.2031 20.9436 36.222C20.2738 36.1461 19.5396 36.0529 18.741 35.9424C17.9423 35.8319 17.1158 35.6967 16.2614 35.5368C16.473 36.4217 16.7414 37.2874 17.0667 38.1338C17.3921 38.9801 17.7916 39.7429 18.2654 40.4219C18.7304 41.1332 19.2461 41.72 19.8125 42.1823C20.411 42.6533 21.0773 42.9354 21.8115 43.0286C22.3762 43.1109 22.9399 43.0031 23.5028 42.7053C24.0658 42.4075 24.5764 41.8542 25.0347 41.0452C26.0204 39.1698 26.5153 37.3871 26.5194 35.6973C26.5558 34.0161 26.3012 32.3259 25.7557 30.6268C25.5459 30.122 25.4563 29.6839 25.4868 29.3124C25.5173 28.941 25.6153 28.6394 25.781 28.4077C25.9466 28.176 26.1432 28.0217 26.3709 27.9447C26.5986 27.8676 26.809 27.855 27.0022 27.9068C27.7255 28.1696 28.2907 28.7006 28.6977 29.4999C29.1283 30.3399 29.4536 31.1863 29.6738 32.039C29.8979 33.1343 29.9812 34.4335 29.9235 35.9365C29.8659 37.4394 29.599 38.8863 29.1228 40.2771C28.6702 41.7088 27.9698 42.9705 27.0215 44.0623C26.0733 45.154 24.8325 45.8568 23.299 46.1706C21.5252 46.351 20.0418 46.0916 18.8488 45.3923C17.6472 44.7252 16.6316 43.8147 15.802 42.6607C14.9724 41.5066 14.2665 40.2132 13.6841 38.7803C13.134 37.3561 12.631 36.0135 12.1752 34.7525C10.7413 34.4373 9.34813 34.0985 7.99584 33.7362C6.63491 33.406 5.37921 33.0696 4.22873 32.7268Z" fill="#181818"/>
+      </svg>        
+    </div>
+  </div>
 
-	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 5.0?</h2>
-		<p>
-			From content layers to server islands, click to learn more about the new features and
-			improvements in Astro 5.0
-		</p>
-	</a>
+  <!-- Main Content -->
+  <div class="flex flex-col items-center justify-center h-full text-center max-w-4xl mx-auto">
+    <!-- Greeting -->
+    <h1 class="font-script text-[30px] font-normal text-black">
+      Hi I'm Bailey
+    </h1>
+
+    <!-- Main Heading -->
+    <h2 class="font-roboto text-[36px] font-black text-black mb-6 leading-tight">
+      Shopify consulting and<br>web development
+    </h2>
+
+    <!-- Call to Action Button -->
+    <a 
+      href="" 
+      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/baileypaserk/30min?background_color=b4e6fc'});return false;"
+      class="bg-[#B4E6FC] border-3 rounded-sm border-black px-8 py-1 mb-8 hover:bg-[#fcb4fb] transition-all duration-300 inline-block text-center cursor-pointer"
+    >
+      <span class="font-plex text-[21px] font-bold text-black">
+        BOOK A CALL
+      </span>
+    </a>
+  </div>
+
+  <!-- Newsletter Section - Bottom Left on Desktop -->
+  <div class="absolute bottom-8 left-8 max-w-sm">
+    <!-- Section Heading -->
+    <h3 class="text-left font-roboto text-[24px] leading-none font-black text-black uppercase mb-1">
+      EMAIL LIST OR WHATEVER
+    </h3>
+
+    <!-- Description -->
+    <p class="text-left font-plex text-[14px] leading-none font-thin text-black mt-0 mb-3">
+      Shopify tips, web dev insights, and project updates.
+    </p>
+
+    <!-- Email Input and Subscribe Button -->
+    <form action="https://app.kit.com/forms/8396869/subscriptions" method="post" class="flex flex-row">
+      <input 
+        type="email" 
+        name="email_address"
+        placeholder="Your email address" 
+        required
+        class="flex-1 bg-black text-[#B4E6FC] font-plex text-[14px] font-semibold px-4 py-3 placeholder-gray-400 rounded-l-sm"
+      >
+      <button type="submit" class="bg-white border-3 rounded-r-sm border-black px-6 py-3 hover:bg-[#fcb4fb] cursor-pointer transition-all duration-300">
+        <span class="font-plex text-[14px] font-semibold text-black">
+          SUBSCRIBE
+        </span>
+      </button>
+    </form>
+  </div>
+  <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 </div>
-
-<style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
-
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
-
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
-
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
-
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
-
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
-
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
-	}
-</style>
