@@ -38,6 +38,7 @@
 
   <!-- Fixed Footer - Newsletter Section -->
   <div class="fixed bottom-0 left-0 right-0 bg-[#F1F1F1] px-4 sm:px-8 py-8 border-t border-gray-200">
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
     <div class="max-w-sm mx-auto sm:mx-0 sm:ml-8">
       <!-- Section Heading -->
       <h3 class="text-center sm:text-left font-roboto text-[24px] leading-none font-black text-black uppercase mb-1">
@@ -50,21 +51,47 @@
       </p>
 
       <!-- Email Input and Subscribe Button -->
-      <form action="https://app.kit.com/forms/8396869/subscriptions" method="post" class="flex flex-row">
-        <input 
-          type="email" 
-          name="email_address"
-          placeholder="Your email address" 
-          required
-          class="flex-1 bg-black text-[#B4E6FC] font-plex text-[14px] font-semibold px-4 py-3 placeholder-gray-400 rounded-l-sm"
-        >
-        <button type="submit" class="bg-white border-3 rounded-r-sm border-black px-6 py-3 hover:bg-[#fcb4fb] cursor-pointer transition-all duration-300">
-          <span class="font-plex text-[14px] font-semibold text-black">
-            SUBSCRIBE
-          </span>
-        </button>
+      <form 
+        action="https://app.kit.com/forms/8396869/subscriptions" 
+        method="post" 
+        class="flex flex-row seva-form formkit-form"
+        data-sv-form="8396869" 
+        data-uid="1bb1f07d3c" 
+        data-format="inline" 
+        data-version="5"
+        data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;message&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}"
+      >
+        <!-- Error Messages Container -->
+        <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+        
+        <!-- Form Fields Container -->
+        <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields flex flex-row w-full items-center">
+          <div class="formkit-field flex-1">
+            <input 
+              type="email" 
+              name="email_address"
+              placeholder="Your email address" 
+              required
+              class="w-full bg-black text-[#B4E6FC] font-plex text-[14px] font-semibold px-4 py-3 placeholder-gray-400 rounded-l-sm h-[48px]"
+            >
+          </div>
+          <button 
+            type="submit" 
+            data-element="submit" 
+            class="formkit-submit bg-white border-3 rounded-r-sm border-black px-6 py-3 hover:bg-[#fcb4fb] cursor-pointer transition-all duration-300 h-[48px]"
+          >
+            <!-- Loading Spinner -->
+            <div class="formkit-spinner">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <span class="font-plex text-[14px] font-semibold text-black">
+              SUBSCRIBE
+            </span>
+          </button>
+        </div>
       </form>
     </div>
   </div>
-  <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 </div>
